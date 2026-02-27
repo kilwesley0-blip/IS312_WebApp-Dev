@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+ <html lang="en"> 
+    <head> 
+      
+      <!--Author's information-->
+        <meta name="author" content="Wesley Kil">
+        <meta name="date" content="2026-02-26">
+        <meta name="description" content="This code demonstrates basic HTML structure for Lab 1.">
+
+        <meta charset="UTF-8">
+         <title>Diwai Bank Ltd</title> 
+
+         <link rel="stylesheet" href="style.css">
+
+          <script> function showContent(section) { 
+                const dashboard = document.getElementById("dashboard");
+                if (section === "accounts") { 
+                dashboard.innerHTML = "<h2>Accounts Information</h2><p>Here your accounts details will be displayed.</p>"; 
+                } else if (section === "transfer") { 
+                dashboard.innerHTML = "<h2>Transfer Between Accounts</h2><form><label>From Account:</label><input type='text'><br><label>To Account:</label><input type='text'><br><label>Amount:</label><input type='number'><br><button type='submit'>Transfer</button></form>";
+                } else if (section === "thirdparty") { 
+                dashboard.innerHTML = "<h2>Third-Party Transfer</h2><form><label>Recipient Name:</label><input type='text'><br><label>Recipient Account:</label><input type='text'><br><label>Amount:</label><input type='number'><br><button type='submit'>Transfer</button></form>";
+                } 
+
+                }
+            </script> 
+
+            </head>
+
+             <body> 
+                <header>Diwai Bank Ltd</header>
+                
+                 <nav> <a href="#">About DBL</a> 
+                    <a href="#">Personal Banking</a>
+                    <a href="#">Business Banking</a>
+                    <a href="#">International Banking</a>
+                    <a href="#">Contact Us</a>
+
+                    </nav> 
+
+            <div class="container">
+            <div class="sidebar">
+                <h2>Transfer Money</h2> 
+
+                 <ul>
+                    <li onclick="showContent('accounts')">Accounts</li>
+                    <li onclick="showContent('transfer')">Transfer between accounts</li>
+                    <li onclick="showContent('thirdparty')">Third-party transfers</li> 
+                </ul> 
+
+            </div>
+             <div class="dashboard" id="dashboard"> 
+
+                <h2>Dashboard</h2>
+                <p>If customer clicks on Accounts, this page should display accounts information.</p>
+                <p>If customer clicks on transfer between accounts, this should display forms for such transfer.</p>
+                <p>If customer clicks on Third-party transfer, this should display forms for such transfer.</p>
+             </div>
+
+             </div> 
+             
+             <footer>© Copyright 2024 Diwai Bank Ltd</footer>
+
+             </body> 
+
+             </html>
